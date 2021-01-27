@@ -1,0 +1,39 @@
+<!doctype html>
+<title>Image Uploader</title>
+<meta charset="utf-8"/>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/vader/jquery-ui.css"/>
+<link rel="stylesheet" href="/css/index.css" />
+
+<body class="">
+<h3>Image Uploader</h3>
+<p>Upload anh len page. Nhung buc anh upload se duoc ket noi voi nhung nguoi ket noi voi server, and se co %s tam anh
+    gan nhat o day </p>
+<noscript>Note: You must have javascript enabled in order to upload and
+    dynamically view new images.
+</noscript>
+
+<div class="contentarea">
+    <img id="image" src="{{ url_for('video_feed') }}">
+
+    <div>
+        <button id="startbutton">Take photo</button>
+    </div>
+    <canvas id="canvas"></canvas>
+    <div class="output">
+        <img id="photo" alt="The screen capture will appear in this box.">
+    </div>
+</div>
+
+<fieldset>
+    <p id="status">Select an image</p>
+    <div id="progressbar"></div>
+    <input id="file" type="file"/>
+    <div id="drop">or drop image here</div>
+</fieldset>
+<h3>Uploaded Images (updated in real-time)</h3>
+<div id="images">%s</div>
+</body>
+
+<script src="/js/index.js"></script>
